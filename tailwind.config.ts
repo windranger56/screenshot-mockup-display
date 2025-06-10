@@ -1,3 +1,4 @@
+
 import type { Config } from "tailwindcss";
 
 export default {
@@ -61,6 +62,19 @@ export default {
 					'accent-foreground': 'hsl(var(--sidebar-accent-foreground))',
 					border: 'hsl(var(--sidebar-border))',
 					ring: 'hsl(var(--sidebar-ring))'
+				},
+				// Custom underwater theme colors
+				ocean: {
+					deep: 'hsl(210 100% 4%)',
+					medium: 'hsl(210 90% 8%)',
+					light: 'hsl(210 80% 12%)'
+				},
+				aqua: {
+					glow: 'hsl(180 100% 50%)',
+					bright: 'hsl(180 100% 60%)'
+				},
+				submarine: {
+					orange: 'hsl(30 100% 60%)'
 				}
 			},
 			borderRadius: {
@@ -84,11 +98,32 @@ export default {
 					to: {
 						height: '0'
 					}
+				},
+				'pulse-glow': {
+					'0%, 100%': {
+						boxShadow: '0 0 20px hsl(180 100% 50% / 0.3)'
+					},
+					'50%': {
+						boxShadow: '0 0 30px hsl(180 100% 50% / 0.6), 0 0 60px hsl(180 100% 50% / 0.2)'
+					}
+				},
+				'submarine-move': {
+					'0%': {
+						transform: 'translateX(0px)'
+					},
+					'50%': {
+						transform: 'translateX(10px)'
+					},
+					'100%': {
+						transform: 'translateX(0px)'
+					}
 				}
 			},
 			animation: {
 				'accordion-down': 'accordion-down 0.2s ease-out',
-				'accordion-up': 'accordion-up 0.2s ease-out'
+				'accordion-up': 'accordion-up 0.2s ease-out',
+				'pulse-glow': 'pulse-glow 2s ease-in-out infinite',
+				'submarine-move': 'submarine-move 3s ease-in-out infinite'
 			}
 		}
 	},
